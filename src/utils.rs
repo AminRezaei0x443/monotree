@@ -1,7 +1,7 @@
 //! A module for implementing some helpful functions for `monotree`.
 use crate::*;
 use num::{NumCast, PrimInt};
-use rand::Rng;
+// use rand::Rng;
 use std::cmp;
 use std::ops::Range;
 
@@ -80,7 +80,8 @@ pub fn cast<T: NumCast, U: NumCast>(n: T) -> U {
 
 /// Generate a random byte based on `rand::random`.
 pub fn random_byte() -> u8 {
-    rand::random::<u8>()
+    0
+    // rand::random::<u8>()
 }
 
 /// Generate random bytes of the given length.
@@ -107,12 +108,12 @@ pub fn slice_to_hash(slice: &[u8]) -> Hash {
 
 /// Shuffle a slice using _Fisher-Yates_ algorithm.
 pub fn shuffle<T: Clone>(slice: &mut [T]) {
-    let mut rng = rand::thread_rng();
-    let s = slice.len();
-    (0..s).for_each(|i| {
-        let q = rng.gen_range(0, s);
-        slice.swap(i, q);
-    });
+    // let mut rng = rand::thread_rng();
+    // let s = slice.len();
+    // (0..s).for_each(|i| {
+    //     let q = rng.gen_range(0, s);
+    //     slice.swap(i, q);
+    // });
 }
 
 /// Get sorted indices from unsorted slice.
