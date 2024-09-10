@@ -25,6 +25,10 @@ where
         let hasher = Hasher::new();
         Monotree { db, hasher }
     }
+    pub fn from_existing(db: D) -> Self {
+        let hasher = Hasher::new();
+        Monotree { db, hasher }
+    }
 
     /// Insert key-leaf entry into the `monotree`. Returns a new root hash.
     pub fn insert(&mut self, root: Option<&Hash>, key: &Hash, leaf: &Hash) -> Result<Option<Hash>> {
