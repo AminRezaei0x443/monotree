@@ -239,6 +239,11 @@ where
             }
         }
     }
+
+    fn get_db(self) -> D {
+        self.db
+    }
+
 }
 
 /// Verify a Merkle proof with the given root, leaf and hasher if the proof is valid or not.
