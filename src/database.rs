@@ -73,6 +73,10 @@ impl MemoryDB {
     pub fn from_existing(db: HashMap<Hash, Vec<u8>>) -> Self {
         MemoryDB {db}
     }
+
+    pub fn get_map(self) -> HashMap<Hash, Vec<u8>> {
+        self.db
+    }
 }
 
 impl Database for MemoryDB {
