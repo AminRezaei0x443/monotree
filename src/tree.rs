@@ -240,7 +240,7 @@ where
         }
     }
 
-    fn get_db(self) -> D {
+    pub fn get_db(self) -> D {
         self.db
     }
 
