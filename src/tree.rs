@@ -240,8 +240,8 @@ where
         }
     }
 
-    pub fn get_db(self) -> D {
-        self.db
+    pub fn get_db(&self) -> &D {
+        &self.db
     }
 
 }
