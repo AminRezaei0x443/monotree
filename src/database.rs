@@ -70,7 +70,7 @@ pub struct MemoryDB {
 }
 
 impl MemoryDB {
-    fn from_existing(db: HashMap<Hash, Vec<u8>>) -> Self {
+    pub fn from_existing(db: HashMap<Hash, Vec<u8>>) -> Self {
         MemoryDB {db}
     }
 }
